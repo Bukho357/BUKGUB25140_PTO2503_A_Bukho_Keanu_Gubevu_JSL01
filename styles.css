@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --sb-width: 5rem;
+  font-family: "Libertinus Mono", monospace;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  background: rgba(244, 247, 253, 1);
+}
+
+/* When body has .sb-expanded class, update sidebar width */
+body.sb-expanded {
+  --sb-width: 12.5rem;
+}
+
+/*aside*/
+aside {
+  position: fixed;
+  inset: 0 auto 0 0;
+  padding: 1rem;
+  width: var(--sb-width);
+  background: rgba(255, 255, 255, 1);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: rgba(0, 1, 18, 1);
+  top: 32.78px;
+  left: 34px;
+}
+
+.rectangle {
+  width: 0.7rem;
+  height: 18px;
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+.rectangle.purple {
+  height: 18px;
+  width: 0.4rem;
+  background-color: rgba(99, 95, 199, 1);
+}
+
+.rectangle.light {
+  height: 18px;
+  width: 0.4rem;
+  background-color: rgba(168, 164, 255, 1);
+}
+
+.rectangle.pink {
+  height: 18px;
+  width: 0.4rem;
+  background-color: rgb(210, 198, 252);
+}
+
+h4 {
+  left: 6450px;
+  color: rgba(130, 143, 163, 1);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.btn {
+  background: rgba(99, 95, 199, 1);
+  color: #fff;
+  width: 166px;
+  height: 35px;
+  text-align: center;
+  border: none;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+/*main*/
+.career {
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.nova {
+  background: rgba(255, 255, 255, 1);
+  padding: 0.75rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.nova {
+  margin-left: var(--sb-width);
+  padding: 1rem 2rem;
+  font-weight: 900;
+}
+
+.status-indicator.todo {
+  background-color: rgba(73, 196, 229, 1);
+}
+
+.status-indicator.doing {
+  background-color: rgba(132, 113, 242, 1);
+}
+
+.status-indicator.done {
+  background-color: rgba(103, 226, 174, 1);
+}
+
+.task-board {
+  margin-left: var(--sb-width);
+  padding: 1rem 2rem;
+}
+
+.task-board {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  left: 6450px;
+  color: rgba(130, 143, 163, 1);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.task-list .task {
+  background: rgba(255, 255, 255, 1);
+  padding: 0.75rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.task-list1 .task {
+  background: rgba(255, 255, 255, 1);
+  padding: 0.75rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  aside {
+    position: relative;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    justify-content: flex-start; /* Use 'flex-start'
+instead of 'left' */
+  }
+  .btn {
+    display: none;
+  }
+  .nova {
+    display: none;
+  }
+  .task-column {
+    width: 100%;
+  }
+  .task-list .task {
+    justify-content: flex-start; /*
+Use 'flex-start' instead of 'left' */
+    font-size: 0.95rem;
+  }
+  .task-list1 .task {
+    display: none;
+  }
+  h4 {
+    display: none;
+  }
+  .status-indicator.todo {
+    background-color: rgba(73, 196, 229, 1);
+  }
+  .status-indicator.doing {
+    background-color: rgba(132, 113, 242, 1);
+  }
+  .status-indicator.done {
+    display: none;
+  }
+  .done {
+    display: none;
+  }
+}
