@@ -153,22 +153,13 @@ h3 {
   font-weight: bold;
 }
 
-.task-list1 .task {
-  background: rgba(255, 255, 255, 1);
-  padding: 0.75rem;
-  border-radius: 0.3rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
 /* Mobile */
 @media (max-width: 480px) {
   aside {
     position: relative;
     width: 100%;
     padding: 1rem 0.5rem;
-    justify-content: flex-start; /* Use 'flex-start'
-instead of 'left' */
+    justify-content: flex-start;
   }
   .btn {
     display: none;
@@ -180,12 +171,8 @@ instead of 'left' */
     width: 100%;
   }
   .task-list .task {
-    justify-content: flex-start; /*
-Use 'flex-start' instead of 'left' */
+    justify-content: flex-start;
     font-size: 0.95rem;
-  }
-  .task-list1 .task {
-    display: none;
   }
   h4 {
     display: none;
@@ -198,8 +185,5 @@ Use 'flex-start' instead of 'left' */
   }
   .status-indicator.done {
     background-color: rgba(103, 226, 174, 1);
-  }
-  .done {
-    display: none;
   }
 }
