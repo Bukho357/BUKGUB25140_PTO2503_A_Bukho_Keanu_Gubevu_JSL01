@@ -197,7 +197,7 @@ Use 'flex-start' instead of 'left' */
     background-color: rgba(132, 113, 242, 1);
   }
   .status-indicator.done {
-    display: none;
+    background-color: rgba(103, 226, 174, 1);
   }
   .done {
     display: none;
